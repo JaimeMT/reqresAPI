@@ -7,8 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ListUserComponent } from './components/list-user/list-user.component';
+import { ListUserComponent } from './components/user/list-user/list-user.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SingleUserComponent } from './components/user/single-user/single-user.component';
+import { ListResourceComponent } from './components/resource/list-resource/list-resource.component';
+import { SingleResourceComponent } from './components/resource/single-resource/single-resource.component';
+import { UserModule } from './components/user/user.module';
+import { ResourceModule } from './components/resource/resource.module';
 
 @NgModule({
   declarations: [
@@ -18,11 +24,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RegisterComponent,
     FooterComponent,
     ListUserComponent,
-    NavbarComponent
+    NavbarComponent,
+    SingleUserComponent,
+    ListResourceComponent,
+    SingleResourceComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UserModule,
+    ResourceModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
