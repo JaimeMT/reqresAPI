@@ -23,6 +23,9 @@ export class ListUserComponent {
 
   borrarUsuario(usuario:number){
 
-    this.userService.deleteUser(usuario);
+    this.userService.deleteUser(usuario).subscribe(data =>{
+
+      console.log("borrado");
+    })
   }
 }
