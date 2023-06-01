@@ -15,7 +15,7 @@ export class ResourceService {
     return this.http.get<Resource[]>('https://reqres.in/api/unknown');
   }
 
-  getResource(idResource: number): Observable<Resource> {
+  getResource(idResource: string): Observable<Resource> {
     return this.http.get<Resource>(`https://reqres.in/api/unknown/${idResource}`);
   }
 
