@@ -1,10 +1,23 @@
 <div class="App">
-  <h1>Hola soy <strong>{{ resource!.name }}</strong></h1>
-  <div class="flex">
-    <div>
-      <p>{{ resource!.year }}</p>
-      <p>{{ resource!.color }}</p>
-      <p>{{ resource!.pantone_value }}</p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h4 class="card-title">Datos del Usuario</h4>
+            <div class="card-details">
+              <p><strong>Nombre:</strong> {{ resource!.name }}</p>
+              <p><strong>Año:</strong> {{ resource!.year }}</p>
+              <p><strong>Color:</strong> {{ resource!.color }}</p>
+              <p><strong>Valor Pantone:</strong> {{ resource!.pantone_value }}</p>
+            </div>
+            <button [routerLink]="['/resources']" class="btn btn-primary float-right">Volver</button>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+

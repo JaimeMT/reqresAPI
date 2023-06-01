@@ -2,8 +2,13 @@
   <div class="col">
     <div class="card">
       <div class="card-header">
-        <button class="btn btn-primary">Añadir Recurso</button>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-primary ">Añadir Recurso</button>
+          <button [routerLink]="['/users']" class="btn btn-success">Ver Listado User</button>
+        </div>
       </div>
+
+
       <div class="card-body">
         <table class="table table-striped">
           <thead class="thead-dark">

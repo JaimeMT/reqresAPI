@@ -1,10 +1,32 @@
-<div class="App">
-  <h1>Hola soy <strong>{{ user!.first_name }}</strong></h1>
-  <div class="flex">
-    <div>
-      <p>{{ user!.email }}</p>
-      <img [src]="user!.avatar" />
-    </div>
+<div class="user-profile">
+  <div class="user-photo">
+    <img [src]="user!.avatar" alt="Foto de perfil" class="img-fluid rounded-circle">
   </div>
-</div>
+  <div class="user-details">
+    <div class="row">
+      <div class="col-md-7">
+        <h2>Nombre del usuario</h2>
+        <p>Usuario: {{ user!.first_name }}</p>
 
+      </div>
+      <div class="col-md-5">
+        <h2>Apellidos del usuario</h2>
+        <p>Apellidos: {{ user.last_name }}</p>
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Correo de usuario</h2>
+        <p>Email: {{ user.email }}</p>
+
+      </div>
+
+    </div>
+    <button [routerLink]="['/users']" class="btn btn-primary float-right">Volver</button>
+
+  </div>
+
+
+</div>
