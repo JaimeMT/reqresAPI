@@ -1,1 +1,37 @@
-<p>list-resource works!</p>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn btn-primary">Añadir Recurso</button>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Año</th>
+              <th>Color</th>
+              <th>Pantone</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let resurce of recursos">
+                <td>{{resurce.id}}</td>
+                <td>{{resurce.name}}</td>
+                <td>{{resurce.year}}</td>
+                <td>{{resurce.color}}</td>
+                <td>{{resurce.pantone_value}} </td>
+                <td>
+                  <button [routerLink]="['/resources',resurce.id]" class="btn btn-primary">Ver Resource</button>
+                  <button [routerLink]="['/resources',resurce.id]" class="btn btn-warning">Editar</button>
+                  <button class="btn btn-danger">Borrar</button>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
