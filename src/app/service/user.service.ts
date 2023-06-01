@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../interface/user.interface';
 import { Observable } from 'rxjs';
+import { UserRegister } from '../interface/user-register.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +35,7 @@ export class UserService {
     return this.http.post<boolean>('https://reqres.in/api/login', user);
   }
 
-  register(user: User): Observable<boolean> {
+  register(user: UserRegister): Observable<boolean> {
     return this.http.post<boolean>('https://reqres.in/api/register', user);
   }
 
