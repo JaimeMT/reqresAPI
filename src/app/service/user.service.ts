@@ -14,7 +14,7 @@ export class UserService {
     return this.http.get<User[]>('https://reqres.in/api/users?page=2');
   }
 
-  getUser(idUser: number): Observable<User> {
+  getUser(idUser: string): Observable<User> {
     return this.http.get<User>(`https://reqres.in/api/users/${idUser}`);
   }
 
