@@ -15,6 +15,7 @@ import { ListResourceComponent } from './components/resource/list-resource/list-
 import { SingleResourceComponent } from './components/resource/single-resource/single-resource.component';
 import { UserModule } from './components/user/user.module';
 import { ResourceModule } from './components/resource/resource.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ResourceModule } from './components/resource/resource.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     UserModule,
     ResourceModule,
     HttpClientModule
