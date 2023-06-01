@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { User } from '../interface/user.interface';
 import { Observable } from 'rxjs';
 
@@ -12,6 +12,30 @@ export class UserService {
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>('https://reqres.in/api/users?page=2');
+  }
+
+  getUser(idUser: number): Observable<User> {
+    return this.http.get<User>(`https://reqres.in/api/users/${idUser}`);
+  }
+
+  createUser(user: User): Observable<User> {
+    return this.http.post<User>('https://reqres.in/api/users', user);
+  }
+
+  updateUser(idUser: number, user: User): Observable<User> {
+    return this.http.put<User>(`https://reqres.in/api/users/${idUser}`, user);
+  }
+
+  deleteUser(idUser: number): Observable<User> {
+    return this.http.delete<User>(`https://reqres.in/api/users/${idUser}`);
+  }
+
+  login(user: User): Observable<boolean> {
+    return this.http.post<boolean>('https://reqres.in/api/login', user);
+  }
+
+  register(user: User): Observable<boolean> {
+    return this.http.post<boolean>('https://reqres.in/api/register', user);
   }
 
 }
