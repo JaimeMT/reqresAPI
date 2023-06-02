@@ -14,10 +14,11 @@
           <div class="card-body">
             <h4 class="card-title">Datos del Usuario</h4>
             <div class="card-details">
-              <p><strong>Nombre:</strong> {{ resource.name }}</p>
-              <p><strong>Año:</strong> {{ resource.year }}</p>
-              <p><strong >Color:</strong> {{ resource.color }}</p>
-              <p><strong>Valor Pantone:</strong> {{ resource.pantone_value }}</p>
+              <p><strong>Nombre: </strong> {{ resource.name }}</p>
+              <p><strong>Año: </strong> {{ resource.year }}</p>
+             <p><strong >Color: </strong> <span [style.background-color]="resource.color">{{ resource.color }} </span></p>
+
+              <p><strong>Valor Pantone: </strong> {{ resource.pantone_value }}</p>
             </div>
             <button [routerLink]="['/resources']" class="btn btn-primary float-right">Volver</button>
           </div>
