@@ -26,10 +26,12 @@ export class LoginComponent {
       password: this.password
     };
 
-    console.log(userLogin);
     this.userService.login(userLogin).subscribe({next : rest => {
       console.log(rest);
-        this.router.navigate(['/users']);
+      this.router.navigate(['/users']);
+      const jsonToken = JSON.stringify(rest);
+      localStorage.setItem('jsonToken', jsonToken);
+      console.log(jsonToken);
     },
 
     error: error => {
