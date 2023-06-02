@@ -1,6 +1,8 @@
 import { Component,ElementRef,Renderer2,ViewChild } from '@angular/core';
 import { User } from 'src/app/interface/user.interface';
 import { UserService } from 'src/app/service/user.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-user',
@@ -15,7 +17,7 @@ export class ListUserComponent {
   @ViewChild('parrf')  parrafo? : ElementRef;
   texto?:ElementRef;
 
-  constructor(private userService: UserService, private renderer2:Renderer2) {
+  constructor(private userService: UserService, private renderer2:Renderer2, private router: Router) {
 
 
   }
@@ -46,5 +48,9 @@ export class ListUserComponent {
 
 
     })
+  }
+
+  logout() {
+    this.router.navigate(['']);
   }
 }

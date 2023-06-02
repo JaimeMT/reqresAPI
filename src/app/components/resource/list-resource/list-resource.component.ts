@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Resource } from 'src/app/interface/resource.interface';
 import { ResourceService } from 'src/app/service/resource.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-resource',
@@ -13,9 +15,7 @@ export class ListResourceComponent implements OnInit {
 
   recursos?: Resource[]; // puede ser nulo
 
-  constructor(private recursosService: ResourceService){
-
-
+  constructor(private recursosService: ResourceService, private router: Router){
 
 
 }
@@ -29,5 +29,9 @@ export class ListResourceComponent implements OnInit {
   })
 
  }
+
+  logout() {
+    this.router.navigate(['']);
+  }
 
 }
