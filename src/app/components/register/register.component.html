@@ -1,1 +1,15 @@
-<p>register works!</p>
+<div>
+  <h2>Registro</h2>
+  <div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" required>
+    </div>
+    <div>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit" (click)="register()">Registrarse</button>
+  </div>
+</div>
+

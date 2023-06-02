@@ -31,7 +31,7 @@ export class UserService {
     return this.http.delete<User>(`https://reqres.in/api/users/${idUser}`);
   }
 
-  login(user: User): Observable<boolean> {
+  login(user: UserRegister): Observable<boolean> {
     return this.http.post<boolean>('https://reqres.in/api/login', user);
   }
 
