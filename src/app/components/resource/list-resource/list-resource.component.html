@@ -26,7 +26,7 @@
                 <td>{{resurce.id}}</td>
                 <td>{{resurce.name}}</td>
                 <td>{{resurce.year}}</td>
-                <td>{{resurce.color}}</td>
+                <td [style.background-color]="resurce.color">{{resurce.color}}</td>
                 <td>{{resurce.pantone_value}} </td>
                 <td>
                   <button [routerLink]="['/resources',resurce.id]" class="btn btn-primary me-md-2">Ver Resource</button>
