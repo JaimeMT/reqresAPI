@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ElementRef,Renderer2,ViewChild } from '@angular/core';
 import { User } from 'src/app/interface/user.interface';
 import { UserService } from 'src/app/service/user.service';
 
@@ -7,11 +7,15 @@ import { UserService } from 'src/app/service/user.service';
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css'],
 })
+
 export class ListUserComponent {
   usuarios?: User[]; // puede ser nulo
 
+  @ViewChild('alert') alert?: ElementRef;
+  @ViewChild('parrf')  parrafo? : ElementRef;
+  texto?:ElementRef;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private renderer2:Renderer2) {
 
 
   }
@@ -26,15 +30,20 @@ export class ListUserComponent {
 
     this.userService.deleteUser(usuario).subscribe(data =>{
 
-      console.log("Borrado");
-      alert('Usuario Borrado');
 
+      this.renderer2.addClass(this.alert?.nativeElement,'alert');
+      this.renderer2.addClass(this.alert?.nativeElement,'alert-success');
+      this.texto = this.renderer2.createText('Usuario Borrado con éxito !!!');
+      this.renderer2.appendChild(this.parrafo?.nativeElement,this.texto);
 
 
     }, error =>{
 
-      console.log("Error al borrar");
-      alert('Error al borrar');
+      this.renderer2.addClass(this.alert?.nativeElement,'alert');
+      this.renderer2.addClass(this.alert?.nativeElement,'alert-danger');
+      this.texto = this.renderer2.createText('Error al borrar el usuario !!!');
+      this.renderer2.appendChild(this.parrafo?.nativeElement,this.texto);
+
 
     })
   }
