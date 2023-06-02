@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+/*CSS del user*/
+
+.user-profile {
+  display: flex;
+  align-items: flex-start;
+  padding: 70px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-photo {
+  flex: 0 0 200px;
+  margin-right: 20px;
+}
+
+
+/*CSS del resource*/
+
+.App {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-details {
+  margin-top: 20px;
+}
+
+.card-details p {
+  margin-bottom: 5px;
+}
+
+
+/*La parte del CSS DEL foortes*/
+.footer {
+  background-color: #756a6c;
+  padding: 20px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+.social-icons {
+margin-top: 10px;
+}
+.social-icons a {
+color: #0ed1f3;
+margin: 0 5px;
+font-size: 20px;
+}
+/*CSS NAVBAR*/
+
+.custom-navbar {
+  background-color: #117eeb;
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: bold;
+}
+
+.custom-navbar .navbar-toggler {
+  border: none;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  font-weight: bold;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+/*Logo*/
+.logo-img {
+  width: 50px;
+  height: auto;
+}
+
+
+
+
+
