@@ -32,6 +32,7 @@ export class ListResourceComponent implements OnInit {
 
   logout() {
     this.router.navigate(['']);
+    localStorage.removeItem('jsonToken');
   }
 
 }

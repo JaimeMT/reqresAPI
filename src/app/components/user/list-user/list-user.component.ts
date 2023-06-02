@@ -52,5 +52,6 @@ export class ListUserComponent {
 
   logout() {
     this.router.navigate(['']);
+    localStorage.removeItem('jsonToken');
   }
 }
