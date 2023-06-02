@@ -111,6 +111,15 @@ h1 {
   margin-bottom: 50px;
   box-shadow: 200px 200px 200px rgba(231, 4, 4, 0.1);
 }
+.custom-card-header {
+  background-color: #117eeb; /* Cambia el color de fondo a tu preferencia */
+}
+.logo {
+  width: 40px; /* Ajusta el ancho del logo según tus necesidades */
+  height: 40px; /* Ajusta la altura del logo según tus necesidades */
+}
+
+
 
 
 
