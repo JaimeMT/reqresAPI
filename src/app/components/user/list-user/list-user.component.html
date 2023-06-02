@@ -8,8 +8,8 @@
         </div>
       </div>
       <div class="card-body">
-        <table class="table table-striped">
-          <thead class="thead-dark">
+        <table class="table table-striped table-hover">
+          <thead class="table-primary">
             <tr>
               <th>ID</th>
               <th>Email</th>
@@ -27,7 +27,7 @@
                 <td>{{usuario.last_name}}</td>
                 <td><img src="{{usuario.avatar}}" alt="" class="img-thumbnail"></td>
                 <td>
-                  <button [routerLink]="['/users',usuario.id]" class="btn btn-primary me-md-2">Ver Usuario</button>
+                  <button [routerLink]="['/users',usuario.id]" class="btn btn-primary me-md-2 ">Ver Usuario</button>
                   <button [routerLink]="['/users',usuario.id]" class="btn btn-warning me-md-2">Editar</button>
                   <button (click)="borrarUsuario(usuario.id)" class="btn btn-danger ">Borrar</button>
                 </td>

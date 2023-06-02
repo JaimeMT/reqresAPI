@@ -10,6 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 export class ListUserComponent {
   usuarios?: User[]; // puede ser nulo
 
+
   constructor(private userService: UserService) {
 
 
@@ -26,10 +27,14 @@ export class ListUserComponent {
     this.userService.deleteUser(usuario).subscribe(data =>{
 
       console.log("Borrado");
+      alert('Usuario Borrado');
+
+
 
     }, error =>{
 
       console.log("Error al borrar");
+      alert('Error al borrar');
 
     })
   }
